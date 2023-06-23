@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Login</title>
+    <style>
+      /* body styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB3_inc38RUMP5SixPtYRuswyuIkoEalx_rvLN166nxg&s);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* container styles */
+      .container {
+        width: 80%;
+        max-width: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border: 5px solid #4caf50;
+        margin: 20px;
+      }
+
+      /* heading styles */
+      h1 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 48px;
+        color: #4caf50;
+        text-shadow: 2px 2px #ccc;
+      }
+
+      /* input label styles */
+      label {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      /* input styles */
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 24px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      /* button styles */
+      button {
+        padding: 16px 32px;
+        font-size: 24px;
+        margin: 10px;
+        display: inline-block;
+        border-radius: 20px;
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* button hover styles */
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      /* link styles */
+      a {
+        color: #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Login</h1>
+
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <div style="text-align: center">
+          <a href="login-student.html"><button>Login</button></a>
+        </div>
+      </form>
+
+      <p>Don't have an account? <a href="#">Register here</a>.</p>
+    </div>
+  </body>
+</html>
