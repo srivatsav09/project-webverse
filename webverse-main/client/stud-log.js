@@ -8,7 +8,7 @@ const validCredentials = [
 // Function to check if the entered credentials are valid
 function isValidCredentials(username, password) {
   return validCredentials.some(credential => 
-    credential.username !== username && credential.password !== password
+    credential.username === username && credential.password === password
   );
 }
 
