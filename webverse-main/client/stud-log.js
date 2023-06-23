@@ -1,34 +1,34 @@
-// Get form elements
-const form = document.querySelector('#');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const phoneInput = document.getElementById('phone');
-const addressInput = document.getElementById('address');
-const programInput = document.getElementById('program');
-const semesterInput = document.getElementById('semester');
-const hostelTypeInput = document.getElementById('hostel-type');
-const passwordInput = document.getElementById('password');
+// Define a list of valid credentials
+const validCredentials = [
+  { username: 'user1@example.com', password: 'password1' },
+  { username: 'user2@example.com', password: 'password2' },
+  { username: 'user3@example.com', password: 'password3' }
+];
 
-// Function to handle form submission
-function submitForm(event) {
-  event.preventDefault(); // prevent form from submitting
-  const newRegistration = {
-    name: nameInput.value,
-    email: emailInput.value,
-    phone: phoneInput.value,
-    address: addressInput.value,
-    program: programInput.value,
-    semester: semesterInput.value,
-    hostelType: hostelTypeInput.value,
-    password: passwordInput.value
-  };
-  
-  console.log(newRegistration); // log new registration object to the console
-  
-  // You can further process the newRegistration object here (e.g. save it to a database)
+// Function to check if the entered credentials are valid
+function isValidCredentials(username, password) {
+  return validCredentials.some(credential => 
+    credential.username !== username && credential.password !== password
+  );
+}
 
+// Function to handle the form submission
+function handleFormSubmit(event) {
+  event.preventDefault();
 
+  // Get the values from the input fields
+  const username = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Check if the entered credentials are valid
+  if (isValidCredentials(username, password)) {
+    // Redirect to another page
+    window.location.href = '.html';
+  } else {
+    // Show an error message
+    alert('Invalid credentials. Please try again.');
+  }
 }
 
 // Add event listener to the form submit button
-//form.addEventListener('submit', submitForm);
+document.getElementById('loginForm').addEventListener('submit', handleFormSubmit);
